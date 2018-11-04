@@ -273,6 +273,14 @@
         ]
     },
     {
+        "id": "e949ccc0.869bd",
+        "type": "subflow",
+        "name": "Subflow 1",
+        "info": "",
+        "in": [],
+        "out": []
+    },
+    {
         "id": "a9cf675c.efb978",
         "type": "ui_group",
         "z": "",
@@ -449,7 +457,7 @@
             "name": "theme-light",
             "lightTheme": {
                 "default": "#0094CE",
-                "baseColor": "#0094CE",
+                "baseColor": "#00ff00",
                 "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
                 "edited": true,
                 "reset": false
@@ -470,11 +478,11 @@
             "themeState": {
                 "base-color": {
                     "default": "#0094CE",
-                    "value": "#0094CE",
+                    "value": "#00ff00",
                     "edited": true
                 },
                 "page-titlebar-backgroundColor": {
-                    "value": "#0094CE",
+                    "value": "#00ff00",
                     "edited": false
                 },
                 "page-backgroundColor": {
@@ -486,7 +494,7 @@
                     "edited": false
                 },
                 "group-textColor": {
-                    "value": "#1bbfff",
+                    "value": "#4dff4d",
                     "edited": false
                 },
                 "group-borderColor": {
@@ -502,7 +510,7 @@
                     "edited": false
                 },
                 "widget-backgroundColor": {
-                    "value": "#0094ce",
+                    "value": "#00ff00",
                     "edited": false
                 },
                 "widget-borderColor": {
@@ -521,7 +529,7 @@
             }
         },
         "site": {
-            "name": "Node-RED Dashboard",
+            "name": "SmartFarm IOT",
             "hideToolbar": "false",
             "allowSwipe": "false",
             "allowTempTheme": "true",
@@ -1288,8 +1296,8 @@
         "name": "",
         "group": "15567875.236c28",
         "order": 0,
-        "width": "6",
-        "height": "4",
+        "width": "0",
+        "height": "0",
         "label": "Độ ẩm",
         "chartType": "line",
         "legend": "false",
@@ -1316,7 +1324,7 @@
             "#c5b0d5"
         ],
         "useOldStyle": true,
-        "x": 420,
+        "x": 430,
         "y": 780,
         "wires": [
             [],
