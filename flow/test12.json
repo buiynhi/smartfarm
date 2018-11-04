@@ -1,0 +1,19 @@
+[
+    {
+        "id": "ddc43e1e.7bbde",
+        "type": "http request",
+        "z": "67396888.546338",
+        "name": "[REST][GET]iNut cảm biến - iNut S1",
+        "method": "GET",
+        "ret": "txt",
+        "url": "https://connect.mysmarthome.vn/api/1.0/request/p0RP9PqI98hEk3lAtDLMXQ3tlg92/rk1YmUX9Q/2bf6f3174a039efb0d0974a3714f46b7831905351238/req_device",
+        "tls": "",
+        "x": 1490,
+        "y": 500,
+        "wires": [
+            [
+                "424fbc5f.710964"
+            ]
+        ]
+    }
+]

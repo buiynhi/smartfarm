@@ -7,13 +7,6 @@
         "info": ""
     },
     {
-        "id": "8ab3092.a9754f8",
-        "type": "tab",
-        "label": "Flow 1",
-        "disabled": false,
-        "info": ""
-    },
-    {
         "id": "726890ef.fbc8b",
         "type": "subflow",
         "name": "Lấy dữ từ iNut (2)",
@@ -448,6 +441,102 @@
         "name": "Kiểm thử iNut cảm biến",
         "icon": "dashboard",
         "order": 1
+    },
+    {
+        "id": "8a7df537.0368a8",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#ffffff",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
     },
     {
         "id": "47ca7b51.a81ae4",
@@ -1572,405 +1661,6 @@
                 "14025f1.7d056a1",
                 "268767ea.d7f428"
             ]
-        ]
-    },
-    {
-        "id": "fa4dd3bf.de8c8",
-        "type": "debug",
-        "z": "8ab3092.a9754f8",
-        "name": "in ra màn hình để debug thông tin",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "x": 900,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "18be5bf.f4c71a4",
-        "type": "function",
-        "z": "8ab3092.a9754f8",
-        "name": "Chuẩn bị lệnh trước khi gửi đến iNut cảm biến",
-        "func": "var json = {\"id\": 0, \"command\": msg.payload};\nmsg.payload = json;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 461.7525100708008,
-        "y": 138.75757503509521,
-        "wires": [
-            [
-                "fa4dd3bf.de8c8"
-            ]
-        ]
-    },
-    {
-        "id": "e9c87838.a77308",
-        "type": "ui_gauge",
-        "z": "8ab3092.a9754f8",
-        "name": "",
-        "group": "fc14d5ea.b2cad8",
-        "order": 2,
-        "width": "3",
-        "height": "3",
-        "gtype": "gage",
-        "title": "Data 1",
-        "label": "",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "10000",
-        "colors": [
-            "#1f964f",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 755.2654304504395,
-        "y": 384.6011848449707,
-        "wires": []
-    },
-    {
-        "id": "f4cb1010.d5ef",
-        "type": "ui_gauge",
-        "z": "8ab3092.a9754f8",
-        "name": "",
-        "group": "fc14d5ea.b2cad8",
-        "order": 1,
-        "width": "3",
-        "height": "3",
-        "gtype": "gage",
-        "title": "Data 0",
-        "label": "mưa",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "10000",
-        "colors": [
-            "#1f964f",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 754.3566970825195,
-        "y": 343.8928327560425,
-        "wires": []
-    },
-    {
-        "id": "daa9c7a6.e8da48",
-        "type": "ui_gauge",
-        "z": "8ab3092.a9754f8",
-        "name": "",
-        "group": "fc14d5ea.b2cad8",
-        "order": 4,
-        "width": "3",
-        "height": "3",
-        "gtype": "gage",
-        "title": "Data 3",
-        "label": "",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "10000",
-        "colors": [
-            "#1f964f",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 754.2654304504395,
-        "y": 467.43449783325195,
-        "wires": []
-    },
-    {
-        "id": "2cfe9b6.3aeef64",
-        "type": "ui_gauge",
-        "z": "8ab3092.a9754f8",
-        "name": "",
-        "group": "fc14d5ea.b2cad8",
-        "order": 3,
-        "width": "3",
-        "height": "3",
-        "gtype": "gage",
-        "title": "Data 2",
-        "label": "mưa",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "10000",
-        "colors": [
-            "#1f964f",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 753.3566970825195,
-        "y": 426.72614574432373,
-        "wires": []
-    },
-    {
-        "id": "ffb4fe49.36578",
-        "type": "ui_gauge",
-        "z": "8ab3092.a9754f8",
-        "name": "",
-        "group": "596ea24d.49584c",
-        "order": 2,
-        "width": "3",
-        "height": "3",
-        "gtype": "gage",
-        "title": "Data 5",
-        "label": "",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "10000",
-        "colors": [
-            "#1f964f",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 752.2654304504395,
-        "y": 552.434497833252,
-        "wires": []
-    },
-    {
-        "id": "fa70abfa.5d7dc8",
-        "type": "ui_gauge",
-        "z": "8ab3092.a9754f8",
-        "name": "",
-        "group": "596ea24d.49584c",
-        "order": 1,
-        "width": "3",
-        "height": "3",
-        "gtype": "gage",
-        "title": "Data 4",
-        "label": "mưa",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "10000",
-        "colors": [
-            "#1f964f",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 751.3566970825195,
-        "y": 511.72614574432373,
-        "wires": []
-    },
-    {
-        "id": "7435db14.bf2624",
-        "type": "ui_gauge",
-        "z": "8ab3092.a9754f8",
-        "name": "",
-        "group": "596ea24d.49584c",
-        "order": 4,
-        "width": "3",
-        "height": "3",
-        "gtype": "gage",
-        "title": "Data 7",
-        "label": "",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "10000",
-        "colors": [
-            "#1f964f",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 751.2654304504395,
-        "y": 635.2678108215332,
-        "wires": []
-    },
-    {
-        "id": "fe1c630b.fb57a",
-        "type": "ui_gauge",
-        "z": "8ab3092.a9754f8",
-        "name": "",
-        "group": "596ea24d.49584c",
-        "order": 3,
-        "width": "3",
-        "height": "3",
-        "gtype": "gage",
-        "title": "Data 6",
-        "label": "mưa",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "10000",
-        "colors": [
-            "#1f964f",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 750.3566970825195,
-        "y": 594.559458732605,
-        "wires": []
-    },
-    {
-        "id": "a0a8f7cd.3767e8",
-        "type": "ui_text_input",
-        "z": "8ab3092.a9754f8",
-        "name": "",
-        "label": "Gửi lệnh xuống iNut cảm biến",
-        "group": "fc14d5ea.b2cad8",
-        "order": 5,
-        "width": "4",
-        "height": "1",
-        "passthru": true,
-        "mode": "text",
-        "delay": "0",
-        "topic": "",
-        "x": 121.25247955322266,
-        "y": 138.85898303985596,
-        "wires": [
-            [
-                "18be5bf.f4c71a4",
-                "82c3275f.7d63d8",
-                "3edf6630.ce943a"
-            ]
-        ]
-    },
-    {
-        "id": "71363868.41efc8",
-        "type": "ui_text",
-        "z": "8ab3092.a9754f8",
-        "group": "596ea24d.49584c",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Đã gửi lệnh",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 662.5385131835938,
-        "y": 178.9340410232544,
-        "wires": []
-    },
-    {
-        "id": "82c3275f.7d63d8",
-        "type": "function",
-        "z": "8ab3092.a9754f8",
-        "name": "Lấy độ dài chuỗi",
-        "func": "\nmsg.payload =  msg.payload.length;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 361.2654800415039,
-        "y": 220.43448162078857,
-        "wires": [
-            [
-                "a9b548c4.851c78"
-            ]
-        ]
-    },
-    {
-        "id": "a9b548c4.851c78",
-        "type": "ui_numeric",
-        "z": "8ab3092.a9754f8",
-        "name": "Độ dài chuỗi",
-        "label": "",
-        "group": "fc14d5ea.b2cad8",
-        "order": 6,
-        "width": "2",
-        "height": "1",
-        "passthru": true,
-        "topic": "",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "32",
-        "step": 1,
-        "x": 534.3591995239258,
-        "y": 217.88762855529785,
-        "wires": [
-            [
-                "2f6d43c.b470cbc"
-            ]
-        ]
-    },
-    {
-        "id": "3edf6630.ce943a",
-        "type": "function",
-        "z": "8ab3092.a9754f8",
-        "name": "Lấy đoạn chuỗi mà Arduino nhận được",
-        "func": "\nmsg.payload =  msg.payload.substr(0, 32);\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 429.3855209350586,
-        "y": 179.06986141204834,
-        "wires": [
-            [
-                "71363868.41efc8"
-            ]
-        ]
-    },
-    {
-        "id": "2cc92eea.1373e2",
-        "type": "subflow:b56c2fc8.a3ca9",
-        "z": "8ab3092.a9754f8",
-        "name": "",
-        "x": 451.25244903564453,
-        "y": 462.4241056442261,
-        "wires": [
-            [
-                "f4cb1010.d5ef"
-            ],
-            [
-                "e9c87838.a77308"
-            ],
-            [
-                "2cfe9b6.3aeef64"
-            ],
-            [
-                "daa9c7a6.e8da48"
-            ],
-            [
-                "fa70abfa.5d7dc8"
-            ],
-            [
-                "ffb4fe49.36578"
-            ],
-            [
-                "fe1c630b.fb57a"
-            ],
-            [
-                "7435db14.bf2624"
-            ]
-        ]
-    },
-    {
-        "id": "ecacd79.b3c9528",
-        "type": "mqtt in",
-        "z": "8ab3092.a9754f8",
-        "name": "[MQTT-IN]iNut cảm biến - iNut S1",
-        "topic": "request/p0RP9PqI98hEk3lAtDLMXQ3tlg92/rk1YmUX9Q/2bf6f3174a039efb0d0974a3714f46b7831905351238",
-        "qos": "2",
-        "broker": "ba24fac0.a02498",
-        "x": 170,
-        "y": 440,
-        "wires": [
-            [
-                "2cc92eea.1373e2"
-            ]
-        ]
-    },
-    {
-        "id": "2f6d43c.b470cbc",
-        "type": "http request",
-        "z": "8ab3092.a9754f8",
-        "name": "[REST][POST]iNut cảm biến - iNut S1",
-        "method": "POST",
-        "ret": "txt",
-        "url": "https://connect.mysmarthome.vn/api/1.0/request/p0RP9PqI98hEk3lAtDLMXQ3tlg92/rk1YmUX9Q/2bf6f3174a039efb0d0974a3714f46b7831905351238/req_device_toggle",
-        "tls": "",
-        "x": 950,
-        "y": 240,
-        "wires": [
-            []
         ]
     }
 ]
